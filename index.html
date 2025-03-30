@@ -34,27 +34,32 @@
 
         .container {
             max-width: 960px;
-            margin: 60px auto; /* Increased top/bottom margin */
-            padding: 0 20px; /* Add horizontal padding */
+            margin: 80px auto 60px auto; /* Increased top margin */
+            padding: 0 20px;
             text-align: center;
         }
 
         header h1 {
             font-family: 'Roboto Mono', monospace;
-            font-size: 3.5em; /* Larger */
+            font-size: 3.8em; /* Slightly larger */
             font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 15px;
+            /* Add a subtle gradient text effect */
+            background: linear-gradient(180deg, var(--text-color) 70%, #b0b0b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent; 
+            margin-bottom: 20px; /* Increased margin */
             letter-spacing: 1px;
             text-transform: uppercase;
-             text-shadow: 0 2px 10px var(--shadow-color); /* Subtle shadow */
+            text-shadow: 0 2px 10px var(--shadow-color);
         }
 
         header p {
-            font-size: 1.3em; /* Slightly larger */
+            font-size: 1.4em; /* Slightly larger */
             color: var(--subtle-text-color);
-            margin-bottom: 50px;
-            max-width: 600px; /* Constrain width for readability */
+            margin-bottom: 60px; /* Increased margin */
+            max-width: 650px; /* Slightly wider */
             margin-left: auto;
             margin-right: auto;
         }
@@ -102,29 +107,28 @@
 
         .screenshot-gallery {
             display: flex;
-            justify-content: center; /* Center items */
-            align-items: flex-start; /* Align items to top */
+            justify-content: center;
+            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 30px; /* Increased gap */
-            margin-bottom: 50px; /* More space below gallery */
-            perspective: 1000px; /* Add perspective for 3D effect */
+            gap: 35px; /* Increased gap */
+            margin-bottom: 60px; /* Increased margin */
+            perspective: 1000px;
         }
 
         .screenshot-gallery img {
-            max-height: 450px; /* Slightly larger */
+            max-height: 550px; /* Significantly larger */
             width: auto;
             border: 1px solid var(--container-border);
-            border-radius: 12px; /* More rounded corners */
-            background-color: var(--card-background); /* Dark bg behind image */
-            padding: 8px; /* Padding around image */
-            box-shadow: 0 8px 25px var(--shadow-color); /* Enhanced shadow */
+            border-radius: 12px;
+            background-color: var(--card-background);
+            padding: 8px;
+            box-shadow: 0 10px 30px var(--shadow-color); /* Enhanced shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* transform: rotateY(5deg); Optional subtle 3D tilt */
         }
 
         .screenshot-gallery img:hover {
-            transform: scale(1.03) /* rotateY(0deg) */; /* Slight scale up, remove tilt */
-            box-shadow: 0 12px 35px var(--shadow-color), 0 0 15px var(--highlight-glow); /* Enhanced shadow + glow */
+            transform: scale(1.05); /* Slightly larger scale */
+            box-shadow: 0 15px 40px var(--shadow-color), 0 0 20px var(--highlight-glow); /* Enhanced hover shadow + glow */
         }
 
          .features > p { /* Style the paragraph below the gallery */
@@ -170,44 +174,48 @@
         /* Responsive adjustments */
         @media (max-width: 768px) {
              .container {
-                 margin: 40px auto;
+                 margin: 50px auto 40px auto; /* Adjusted margin */
              }
             header h1 {
-                font-size: 2.8em; /* Adjusted size */
+                font-size: 3em; /* Adjusted size */
+                 /* Revert gradient for smaller screens if needed, or keep */
             }
              header p {
-                font-size: 1.1em;
+                font-size: 1.2em; /* Adjusted size */
+                margin-bottom: 50px; /* Adjusted */
              }
             .features h2, .support h2 {
-                font-size: 1.8em; /* Adjusted size */
+                font-size: 1.9em; /* Adjusted size */
             }
             .screenshot-gallery img {
-                max-height: 350px; /* Adjusted size */
-                /* transform: rotateY(0deg); Remove tilt on smaller screens */
+                max-height: 400px; /* Adjusted size for tablets */
             }
              .screenshot-gallery {
-                 gap: 20px;
+                 gap: 25px; /* Adjusted gap */
+                 margin-bottom: 50px; /* Adjusted */
              }
         }
          @media (max-width: 480px) {
             header h1 {
-                font-size: 2.2em; /* Adjusted size */
+                font-size: 2.4em; /* Adjusted size */
             }
              header p {
-                font-size: 1em;
+                font-size: 1.05em; /* Adjusted */
                 margin-bottom: 40px;
+                max-width: 90%; /* Prevent text touching edges */
             }
             /* Removed .cta-button adjustments */
              .app-store-badge {
-                height: 45px; /* Adjusted size */
+                height: 50px; /* Adjusted size */
              }
              .features h2, .support h2 {
-                 font-size: 1.6em;
+                 font-size: 1.7em; /* Adjusted */
              }
              .screenshot-gallery img {
-                 max-height: 300px;
-                 padding: 5px;
-                 border-radius: 8px;
+                 max-height: 320px; /* Adjusted for smaller phones */
+                 padding: 6px;
+                 border-radius: 10px; /* Slightly adjusted */
+                 box-shadow: 0 6px 20px var(--shadow-color); /* Adjusted shadow */
              }
              .support p {
                  font-size: 1em;

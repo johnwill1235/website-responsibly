@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsibly - Track Your Drinks</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -169,6 +170,23 @@
             font-size: 0.9em;
             color: var(--subtle-text-color); /* Use subtle color */
             border-top: 1px solid var(--container-border);
+            text-align: center; /* Center footer content */
+        }
+
+        .footer-logo { /* Added styles for footer logo */
+            display: block; /* Center the image */
+            margin: 0 auto 15px auto; /* Center horizontally and add bottom margin */
+            max-height: 40px;
+            width: auto;
+            opacity: 0.7;
+            /* Assuming the logo is black on transparent/white. Invert makes it white. */
+            /* If logo is white on transparent/black, remove filter. */
+            filter: invert(1); 
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-logo:hover { /* Added hover effect */
+            opacity: 1.0;
         }
 
         /* Responsive adjustments */
@@ -270,7 +288,9 @@
         </section>
 
         <footer>
-            <p>&copy; <span id="year"></span> Your Name / Company Name. All rights reserved.</p>
+            <!-- Added BW Logo -->
+            <img src="images/logo-bw.png" alt="Responsibly Logo" class="footer-logo"> 
+            <p>&copy; <span id="year"></span> John Pasquale Williams. All rights reserved.</p>
             <!-- Optional: Add links to Privacy Policy or Terms of Service -->
         </footer>
     </div>
